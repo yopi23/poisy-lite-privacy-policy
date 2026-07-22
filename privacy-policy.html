@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebijakan Privasi - Poisy Kasir</title>
+    <meta name="description" content="Kebijakan Privasi resmi aplikasi Poisy Kasir (POS) - Informasi pengumpulan data, penggunaan izin perangkat, keamanan, dan kebijakan penghapusan akun.">
+    <style>
+        :root {
+            --primary: #308297;
+            --primary-dark: #1b5362;
+            --primary-light: #e6f4f7;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --success-bg: #f0fdf4;
+            --success-border: #22c55e;
+            --success-text: #15803d;
+            --warning-bg: #fffbeb;
+            --warning-border: #f59e0b;
+            --warning-text: #b45309;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding-bottom: 28px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .header .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .header h1 {
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        .header .subtitle {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .toc-card {
+            background: var(--primary-light);
+            border: 1px solid rgba(48, 130, 151, 0.2);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+
+        .toc-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 8px 16px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-grid a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .toc-grid a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+            scroll-margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 20px 0 10px;
+            color: var(--text-main);
+        }
+
+        p {
+            color: #334155;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        ul, ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            color: #334155;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .highlight-box {
+            background: var(--success-bg);
+            border-left: 4px solid var(--success-border);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 16px 0;
+        }
+
+        .highlight-box p {
+            color: var(--success-text);
+            margin: 0;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .warning-box {
+            background: var(--warning-bg);
+            border-left: 4px solid var(--warning-border);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 16px 0;
+        }
+
+        .warning-box p {
+            color: var(--warning-text);
+            margin: 0;
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        th {
+            background: #f1f5f9;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge-perm {
+            display: inline-block;
+            font-family: monospace;
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid #cbd5e1;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 32px;
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-badge">
+                <span>🏪</span> Poisy Kasir (POS)
+            </div>
+            <h1>Kebijakan Privasi</h1>
+            <p>Aplikasi Kasir Berbasis Cloud & Android</p>
+            <p class="subtitle">Terakhir Diperbarui: 22 Juli 2026 | Berlaku Efektif: 22 Juli 2026</p>
+        </div>
+
+        <div class="toc-card">
+            <h3>📌 Ringkasan Navigasi</h3>
+            <ul class="toc-grid">
+                <li><a href="#pendahuluan">1. Pendahuluan</a></li>
+                <li><a href="#data-dikumpulkan">2. Data yang Dikumpulkan</a></li>
+                <li><a href="#izin-android">3. Izin Perangkat (Android)</a></li>
+                <li><a href="#penggunaan-data">4. Penggunaan Data</a></li>
+                <li><a href="#pihak-ketiga">5. Layanan Pihak Ketiga</a></li>
+                <li><a href="#keamanan">6. Keamanan Data</a></li>
+                <li><a href="#penghapusan-akun">7. Penghapusan Akun & Data</a></li>
+                <li><a href="#anak-anak">8. Privasi Anak-Anak</a></li>
+                <li><a href="#hak-pengguna">9. Hak-Hak Pengguna</a></li>
+                <li><a href="#kontak">10. Hubungi Kami</a></li>
+            </ul>
+        </div>
+
+        <div class="card" id="pendahuluan">
+            <h2><span>👋</span> 1. Pendahuluan</h2>
+            <p>
+                Kebijakan Privasi ini menjelaskan bagaimana <strong>Poisy Kasir</strong> ("kami", "aplikasi", atau "layanan kami")
+                mengumpulkan, menggunakan, menyimpan, dan melindungi informasi pribadi serta data operasional usaha Anda saat menggunakan aplikasi mobile Android <strong>Poisy Kasir</strong> dan platform Web kami.
+            </p>
+            <div class="highlight-box">
+                <p>✅ <strong>Komitmen Privasi:</strong> Kami menghormati kerahasiaan data bisnis Anda. Kami TIDAK PERNAH menjual atau menyewakan data pribadi atau data transaksi toko Anda kepada pihak ketiga.</p>
+            </div>
+        </div>
+
+        <div class="card" id="data-dikumpulkan">
+            <h2><span>📊</span> 2. Informasi yang Kami Kumpulkan</h2>
+            <p>Untuk menyediakan layanan sistem Point of Sale (POS) yang optimal, kami mengumpulkan jenis data berikut:</p>
+
+            <h3>a. Data Akun & Pengguna</h3>
+            <ul>
+                <li><strong>Informasi Pendaftaran:</strong> Nama pengguna, alamat email, dan kata sandi yang dienkripsi.</li>
+                <li><strong>Profil Pengguna:</strong> Foto profil (opsional), peran dalam toko (Admin Pemilik Toko atau Kasir/Staff).</li>
+            </ul>
+
+            <h3>b. Data Usaha & Toko (Tenant)</h3>
+            <ul>
+                <li><strong>Informasi Toko:</strong> Nama usaha, alamat toko, nomor telepon, logo toko, dan rincian kontak bisnis.</li>
+                <li><strong>Data Operasional POS:</strong> Katalog produk, harga, kategori, stok barang, data pemasok (supplier), serta data pelanggan toko.</li>
+                <li><strong>Data Transaksi:</strong> Riwayat penjualan, tanggal transaksi, metode pembayaran, rincian item belanja, dan laporan keuangan toko.</li>
+            </ul>
+
+            <h3>c. Data Teknis & Perangkat</h3>
+            <ul>
+                <li><strong>Informasi Perangkat:</strong> Model perangkat, versi sistem operasi (Android/Web), IP address, log kegagalan (crash logs), dan data performa aplikasi untuk diagnostik keamanan dan peningkatan mutu aplikasi.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="izin-android">
+            <h2><span>🔐</span> 3. Izin Perangkat Android (Permissions)</h2>
+            <p>Aplikasi <strong>Poisy Kasir</strong> meminta beberapa izin akses di perangkat Android Anda. Setiap izin hanya digunakan untuk fungsi aplikasi yang spesifik:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Izin Perangkat</th>
+                        <th>Kategori Izin</th>
+                        <th>Tujuan Penggunaan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge-perm">INTERNET</span></td>
+                        <td>Jaringan</td>
+                        <td>Menyinkronkan data transaksi, inventaris produk, dan akun secara real-time dengan server cloud kami.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-perm">BLUETOOTH</span><br><span class="badge-perm">BLUETOOTH_CONNECT</span><br><span class="badge-perm">BLUETOOTH_SCAN</span></td>
+                        <td>Konektivitas Printer</td>
+                        <td>Mendeteksi, memindai, dan menghubungkan aplikasi ke printer kasir Bluetooth (Thermal Receipt Printer) untuk cetak struk.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-perm">CAMERA</span></td>
+                        <td>Kamera Perangkat</td>
+                        <td>Memindai barcode atau QR code produk saat transaksi kasir dan mengambil foto produk/logo toko secara langsung.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-perm">READ_MEDIA_IMAGES</span> /<br><span class="badge-perm">READ_EXTERNAL_STORAGE</span></td>
+                        <td>Penyimpanan & Galeri</td>
+                        <td>Memilih gambar dari galeri perangkat untuk mengunggah logo toko atau foto produk ke katalog POS.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge-perm">USE_BIOMETRIC</span></td>
+                        <td>Autentikasi Biometrik</td>
+                        <td>Mendukung login praktis menggunakan sidik jari/wajah melalui API biometrik OS. <strong>Data biometrik diproses sepenuhnya di dalam OS perangkat dan TIDAK PERNAH dikirim ke server kami.</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card" id="penggunaan-data">
+            <h2><span>⚙️</span> 4. Penggunaan Data</h2>
+            <p>Kami menggunakan data yang dikumpulkan untuk tujuan berikut:</p>
+            <ul>
+                <li><strong>Layanan Utama:</strong> Menyediakan sistem pencatatan transaksi kasir, manajemen stok, dan laporan analisis keuangan toko Anda.</li>
+                <li><strong>Sinkronisasi Multi-Perangkat:</strong> Memastikan data toko Anda tersinkronkan dengan aman antara aplikasi Android dan dasbor Web.</li>
+                <li><strong>Dukungan Pelanggan:</strong> Membantu menyelesaikan kendala teknis atau pertanyaan operasional yang Anda ajukan.</li>
+                <li><strong>Keamanan & Pencegahan Fraud:</strong> Memverifikasi identitas pengguna, melindungi akun dari akses tak sah, serta menjaga integritas database.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="pihak-ketiga">
+            <h2><span>🌐</span> 5. Layanan Pihak Ketiga & Infrastruktur Cloud</h2>
+            <p>Kami dapat menggunakan penyedia layanan pihak ketiga yang terpercaya untuk mendukung operasional infrastruktur aplikasi:</p>
+            <ul>
+                <li><strong>Layanan Hosting & Cloud Database:</strong> Digunakan untuk meng-host database terenkripsi dan API server backend aplikasi. Penyedia cloud diikat oleh perjanjian kerahasiaan data yang ketat.</li>
+            </ul>
+            <div class="warning-box">
+                <p>🚫 Kami <strong>TIDAK MENJUAL</strong>, menyewakan, membagikan, atau memanfaatkan data transaksi bisnis Anda untuk keperluan iklan pihak ketiga atau pemasaran tanpa izin eksplisit dari Anda.</p>
+            </div>
+        </div>
+
+        <div class="card" id="keamanan">
+            <h2><span>🛡️</span> 6. Keamanan Data & Enkripsi</h2>
+            <p>Kami menerapkan standar keamanan industri untuk melindungi informasi pribadi dan data transaksi Anda:</p>
+            <ul>
+                <li><strong>Enkripsi saat Transit (In-Transit):</strong> Seluruh lalu lintas data antara aplikasi Android/Web dan server kami dilindungi menggunakan protokol enkripsi aman <strong>HTTPS / TLS 1.2+</strong>.</li>
+                <li><strong>Enkripsi saat Penyimpanan (At-Rest):</strong> Kata sandi pengguna diacak menggunakan algoritma hashing satu arah yang kuat (BCrypt/Argon2). Database kami dilindungi dengan proteksi akses berlapis.</li>
+                <li><strong>Kontrol Akses Terbatas:</strong> Hanya pengguna terotorisasi dengan peran yang sesuai (Admin vs Staff) yang memiliki akses ke data operasional toko masing-masing.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="penghapusan-akun">
+            <h2><span>🗑️</span> 7. Retensi Data & Hak Penghapusan Akun (Account Deletion)</h2>
+            <p>Sesuai dengan kebijakan pengguna Google Play Store, kami menyediakan mekanisme yang jelas bagi pengguna untuk meminta penghapusan akun dan data pribadi mereka.</p>
+
+            <h3>a. Prosedur Penghapusan Akun Pemilik Toko (Admin)</h3>
+            <p>Pemilik Toko (Admin) dapat mengajukan penghapusan permanen akun beserta seluruh data tokonya dengan dua cara:</p>
+            <ol>
+                <li><strong>Melalui Aplikasi Mobile (In-App):</strong> Buka menu <em>Pengaturan / Profil</em> &rarr; pilih <em>Hapus Akun & Data Toko</em> &rarr; Konfirmasi permintaan Anda.</li>
+                <li><strong>Melalui Permintaan Email / Layanan Pelanggan:</strong> Kirimkan permintaan resmi melalui email ke <a href="mailto:support@poisy.com">support@poisy.com</a> dengan subjek <code>Permintaan Penghapusan Akun - [Nama Toko/Email Admin]</code>.</li>
+            </ol>
+
+            <h3>b. Akun Kasir / Staff</h3>
+            <p>Akun Kasir (Staff) dibuat dan dikelola di bawah akun Admin Toko. Penghapusan atau penonaktifan akun Kasir dilakukan secara langsung oleh Admin Toko melalui menu Manajemen Kasir di dalam aplikasi.</p>
+
+            <h3>c. Kebijakan Retensi & Penghapusan Permanen Data</h3>
+            <ul>
+                <li>Setelah permintaan penghapusan akun diverifikasi, seluruh data pribadi, kredensial login, katalog produk, dan riwayat transaksi toko akan dihapus secara permanen dari server aktif kami dalam waktu <strong>30 hari kalender</strong>.</li>
+                <li>Data cadangan (backup) yang terenkripsi akan dibersihkan secara otomatis sesuai dengan siklus pembersihan berkala server (maksimal 60 hari).</li>
+            </ul>
+        </div>
+
+        <div class="card" id="anak-anak">
+            <h2><span>👶</span> 8. Privasi Anak-Anak (Children's Privacy)</h2>
+            <p>
+                Aplikasi <strong>Poisy Kasir</strong> dirancang khusus untuk keperluan manajemen usaha dan operasional kasir bisnis. Aplikasi ini <strong>TIDAK ditujukan untuk anak-anak di bawah usia 13 tahun</strong> (atau 16 tahun di wilayah hukum tertentu). Kami tidak secara sengaja mengumpulkan atau meminta data pribadi dari anak-anak. Jika kami mengetahui bahwa kami tidak sengaja mengumpulkan data dari anak di bawah umur, kami akan segera menghapus data tersebut dari server kami.
+            </p>
+        </div>
+
+        <div class="card" id="hak-pengguna">
+            <h2><span>⚖️</span> 9. Hak-Hak Pengguna</h2>
+            <p>Sebagai pengguna, Anda memiliki hak-hak berikut terkait data Anda:</p>
+            <ul>
+                <li><strong>Hak Akses & Portabilitas:</strong> Memeriksa dan mengunduh laporan data penjualan serta katalog toko Anda kapan saja dari aplikasi.</li>
+                <li><strong>Hak Perbaikan (Koreksi):</strong> Mengubah atau memperbarui informasi profil, data toko, dan katalog barang jika terdapat kekeliruan.</li>
+                <li><strong>Hak Penghapusan:</strong> Meminta penghapusan akun dan data pribadi sebagaimana dijelaskan pada Seksi 7.</li>
+            </ul>
+        </div>
+
+        <div class="card" id="kontak">
+            <h2><span>📬</span> 10. Hubungi Kami</h2>
+            <p>
+                Jika Anda memiliki pertanyaan, saran, atau permintaan bantuan terkait Kebijakan Privasi dan penanganan data di aplikasi <strong>Poisy Kasir</strong>, silakan hubungi tim kami melalui:
+            </p>
+            <ul>
+                <li><strong>Email Dukungan Privasi:</strong> <a href="mailto:support@poisy.com">support@poisy.com</a></li>
+                <li><strong>Layanan WhatsApp Customer Support:</strong> <a href="https://wa.me/6281234567890" target="_blank" rel="noopener">+62 812-3456-7890</a></li>
+                <li><strong>Pengembang:</strong> Poisy Kasir Development Team</li>
+                <li><strong>Lokasi:</strong> Indonesia</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Poisy Kasir POS. Seluruh Hak Dilindungi Perundang-Undangan.</p>
+        </div>
+    </div>
+</body>
+
+</html>
